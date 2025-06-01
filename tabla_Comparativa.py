@@ -1,6 +1,9 @@
-
 import streamlit as st
 import pandas as pd
+
+
+st.markdown("---")
+st.header("Comparación de Modelos")
 
 data = {
     'Modelo': ['MobileNetV2', 'Modelo X', 'Modelo Y'],
@@ -11,7 +14,5 @@ data = {
     'Hardware': ['Solo CPU', 'CPU + GPU', 'Solo CPU']
 }
 
-df = pd.DataFrame(data)
-
-st.title("Tabla Comparativa de Modelos")
-st.table(df)
+df_modelos = pd.DataFrame(data)
+st.table(df_modelos)
